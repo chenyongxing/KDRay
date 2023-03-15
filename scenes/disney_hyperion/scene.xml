@@ -1,0 +1,78 @@
+<scene>
+  <setting spp="2048" bounce="6" exposure="5.0" toneMap="3"/>
+  <camera type="perspective" width="1280" height="800">
+    <property fovY="25.360768748746448" nearZ="0.1" farZ="100.0" />
+    <transform matrix="1.0 0.0 0.0 0.08262590318918228 0.0 0.6971650719642639 -0.7169106006622314 -10.66944408416748 0.0 0.7169106006622314 0.6971650719642639 9.877519607543945 0.0 0.0 0.0 1.0" />
+  </camera>
+  <light type="point">
+    <property radius="2.0" radiance="168.87 150 135" />
+    <transform matrix="-0.29086464643478394 -0.7711008191108704 0.5663931965827942 -20.0 0.9551711678504944 -0.1998833566904068 0.21839119493961334 0.0 -0.05518905818462372 0.6045247316360474 0.7946722507476807 17.0 0.0 0.0 0.0 1.0" />
+  </light>
+  <material name="bouncy" type="principled">
+    <property color="0.98 0.18 0.07" roughness="0.3" subsurface="0.8" />
+  </material>
+  <material name="glass" type="principled">
+    <property color="0.8 0.8 0.8" roughness="0.0" transmission="1.0" />
+  </material>
+  <material name="golfball" type="principled">
+    <property color="0.8 0.8 0.8" roughness="0.05" />
+  </material>
+  <material name="ground" type="principled">
+    <property color="0.8 0.8 0.8" roughness="0.5" />
+  </material>
+  <material name="marble1" type="principled">
+    <property color="0.276 0.344 0.223" roughness="0.05" subsurface="0.7" />
+  </material>
+  <material name="marble2" type="principled">
+    <property color="0.255 0.354 0.12" roughness="0.05" subsurface="0.3" />
+  </material>
+  <material name="metal" type="principled">
+    <property color="0.8 0.8 0.8" roughness="0.0" metallic="1.0" />
+  </material>
+  <material name="orange" type="principled">
+    <property color="0.7175 0.17 0.005" roughness="0.2" />
+  </material>
+  <material name="pingpong" type="principled">
+    <property color="0.93 0.89 0.85" roughness="0.4" specular="0.6" subsurface="0.4" />
+  </material>
+  <material name="silver" type="principled">
+    <property color="0.95 0.93 0.88" roughness="0.01" metallic="1.0" />
+  </material>
+  <material name="wood" type="principled">
+    <property colorTexture="textures/wood.jpg" roughness="0.4" />
+  </material>
+  <mesh filepath="meshes/sphere.obj" material="glass">
+    <transform matrix="0.550000011920929 0.0 0.0 3.5 0.0 0.550000011920929 0.0 0.0 0.0 0.0 0.550000011920929 0.550000011920929 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/sphere.obj" material="metal">
+    <transform matrix="0.6000000238418579 0.0 0.0 -3.5 0.0 0.6000000238418579 0.0 0.0 0.0 0.0 0.6000000238418579 0.6000000238418579 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/sphere.obj" material="bouncy">
+    <transform matrix="0.25 0.0 0.0 -2.0 0.0 0.25 0.0 1.100000023841858 0.0 0.0 0.25 0.25 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/sphere.obj" material="marble1">
+    <transform matrix="0.10000000149011612 0.0 0.0 -0.5 0.0 0.10000000149011612 0.0 -2.0 0.0 0.0 0.10000000149011612 0.10000000149011612 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/sphere.obj" material="marble2">
+    <transform matrix="0.15000000596046448 0.0 0.0 0.5 0.0 0.15000000596046448 0.0 -2.0 0.0 0.0 0.15000000596046448 0.15000000596046448 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/pingpong.obj" material="orange">
+    <transform matrix="-0.14702019095420837 -0.477896511554718 0.0 2.0 0.477896511554718 -0.14702019095420837 0.0 1.100000023841858 0.0 0.0 0.5 0.5 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/pingpong.obj" material="pingpong">
+    <transform matrix="-1.9670125084303436e-08 -0.44999998807907104 0.0 -1.5 0.44999998807907104 -1.9670125084303436e-08 0.0 -1.100000023841858 0.0 0.0 0.44999998807907104 0.44999998807907104 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/ring.obj" material="silver">
+    <transform matrix="1.0 0.0 0.0 -0.8167178630828857 0.0 -1.6292068494294654e-07 -1.0 0.361824095249176 0.0 1.0 -1.6292068494294654e-07 0.0 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/ring.obj" material="silver">
+    <transform matrix="0.979669988155365 0.19898056983947754 0.025562793016433716 0.9521439671516418 0.0 0.12742160260677338 -0.9918486475944519 -0.6964413523674011 -0.20061586797237396 0.9716843366622925 0.12483111768960953 0.11062708497047424 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/ring.obj" material="silver">
+    <transform matrix="1.0 0.0 0.0 0.5467065572738647 0.0 -1.6292068494294654e-07 -1.0 -0.9587769508361816 0.0 1.0 -1.6292068494294654e-07 0.0 0.0 0.0 0.0 1.0" />
+  </mesh>
+  <mesh filepath="meshes/ground.obj" material="ground" />
+  <mesh filepath="meshes/table.obj" material="ground" />
+  <mesh filepath="meshes/wood.obj" material="wood" />
+  <mesh filepath="meshes/golfball.obj" material="golfball" />
+</scene>

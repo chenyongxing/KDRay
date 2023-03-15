@@ -1,0 +1,57 @@
+<scene>
+	<setting spp="64" bounce="3"/>
+	<camera type="perspective" width="1024" height="1024">
+		<property fovY="19.5"/>
+		<transform matrix="1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -1.000000 -6.800000 0.000000 1.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000"/>
+	</camera>
+	<light type="rect">
+		<property radiance="17 12 4" visible="true" width="2.0" height="2.0"/>
+		<transform matrix="0.235000 0.000000 0.000000 -0.005000 -0.000000 0.190000 -0.000000 0.030000 -0.000000 0.000000 0.089300 1.980000 0.000000 0.000000 0.000000 1.000000"/>
+	</light>
+	<material name="LeftWall" type="diffuse">
+		<property color="0.63 0.065 0.05" roughness="0.3"/>
+	</material>
+	<material name="RightWall" type="diffuse">
+		<property color="0.14 0.45 0.091" roughness="0.3"/>
+	</material>
+	<material name="Floor" type="diffuse">
+		<property color="0.725 0.71 0.68" roughness="0.3"/>
+	</material>
+	<material name="Ceiling" type="diffuse">
+		<property color="0.725 0.71 0.68" roughness="0.3"/>
+	</material>
+	<material name="BackWall" type="diffuse">
+		<property color="0.725 0.71 0.68" roughness="0.3"/>
+	</material>
+	<material name="ShortBox" type="diffuse">
+		<property color="0.725 0.71 0.68" roughness="0.3"/>
+	</material>
+	<material name="TallBox" type="diffuse">
+		<property color="0.725 0.71 0.68" roughness="0.3"/>
+	</material>
+	<material name="Light" type="diffuse">
+		<property color="0 0 0" roughness="0.3"/>
+	</material>
+	<mesh filepath="meshes/rectangle.obj" material="Floor">
+		<transform matrix="-0.000000 1.000000 0.000000 0.000000 -1.000000 -0.000000 -0.000000 0.000000 0.000000 -0.000000 2.000000 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+	<mesh filepath="meshes/rectangle.obj" material="Ceiling">
+		<transform matrix="-1.000000 0.000000 -0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 -2.000000 2.000000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+	<mesh filepath="meshes/rectangle.obj" material="BackWall">
+		<transform matrix="0.000000 1.000000 0.000000 0.000000 0.000000 -0.000000 2.000000 1.000000 1.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+	<mesh filepath="meshes/rectangle.obj" material="RightWall">
+		<transform matrix="0.000000 -0.000000 2.000000 1.000000 -0.000000 -1.000000 -0.000000 0.000000 1.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+	<mesh filepath="meshes/rectangle.obj" material="LeftWall">
+		<transform matrix="-0.000000 0.000000 -2.000000 -1.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+	<mesh filepath="meshes/cube.obj" material="ShortBox">
+		<transform matrix="0.085164 0.289542 0.000000 0.328631 0.284951 -0.086536 -0.000000 -0.374592 0.000000 0.000000 -0.300000 0.300000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+	<mesh filepath="meshes/cube.obj" material="TallBox">
+		<transform matrix="0.286776 0.098229 -0.000000 -0.335439 0.099798 -0.282266 -0.000000 0.291415 -0.000000 0.000000 -0.600000 0.600000 0.000000 0.000000 0.000000 1.000000"/>
+	</mesh>
+</scene>
+

@@ -1,0 +1,43 @@
+<scene>
+  <setting spp="64" bounce="3"/>
+  <camera type="perspective" width="800" height="600">
+    <property fovY="30.2191523188336" nearZ="0.10000000149011612" farZ="1000.0" />
+    <transform matrix="0.9999891519546509 -0.0013659399701282382 0.004449248313903809 0.25011661648750305 0.004654202610254288 0.29348114132881165 -0.9559535384178162 -16.758831024169922 4.690629218373488e-09 0.9559639096260071 0.29348433017730713 2.594487190246582 0.0 0.0 0.0 1.0" />
+  </camera>
+  <light type="point">
+    <property radius="0.029999999329447746" radiance="5.628954887390137 0.8451052308082581 1.7984193563461304" visible="true" />
+    <transform matrix="1.0 0.0 0.0 -3.75 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0" />
+  </light>
+  <light type="point">
+    <property radius="0.10000000149011612" radiance="2.533029556274414 1.6058287620544434 0.36240094900131226" visible="true" />
+    <transform matrix="1.0 0.0 0.0 -1.25 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0" />
+  </light>
+  <light type="point">
+    <property radius="0.30000001192092896" radiance="0.6041558980941772 2.81447696685791 0.4316461384296417" visible="true" />
+    <transform matrix="1.0 0.0 0.0 1.25 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0" />
+  </light>
+  <light type="point">
+    <property radius="0.8999999761581421" radiance="0.324364572763443 0.9672466516494751 1.2508788108825684" visible="true" />
+    <transform matrix="1.0 0.0 0.0 3.75 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0" />
+  </light>
+  <material name="mtl" type="diffuse">
+    <property color="0.800000011920929 0.800000011920929 0.800000011920929" />
+  </material>
+  <material name="mtl1" type="metal">
+    <property color="0.800000011920929 0.800000011920929 0.800000011920929" roughness="0.0" />
+  </material>
+  <material name="mtl2" type="metal">
+    <property color="0.800000011920929 0.800000011920929 0.800000011920929" roughness="0.10000000149011612" />
+  </material>
+  <material name="mtl3" type="metal">
+    <property color="0.800000011920929 0.800000011920929 0.800000011920929" roughness="0.20000000298023224" />
+  </material>
+  <material name="mtl4" type="metal">
+    <property color="0.800000011920929 0.800000011920929 0.800000011920929" roughness="0.30000001192092896" />
+  </material>
+  <mesh filepath="meshes/floor.obj" material="mtl" />
+  <mesh filepath="meshes/plate1.obj" material="mtl1" />
+  <mesh filepath="meshes/plate2.obj" material="mtl2" />
+  <mesh filepath="meshes/plate3.obj" material="mtl3" />
+  <mesh filepath="meshes/plate4.obj" material="mtl4" />
+</scene>
