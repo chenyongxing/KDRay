@@ -27,3 +27,9 @@
 
 ## build
 Cmake + Visual Studio + Optix7.6.0
+
+## todo
+* volume absorption + volume scatter
+* mipmap + ray cone
+* sobol sampler
+* temporal denoise

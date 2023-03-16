@@ -101,7 +101,7 @@ void drawImgui()
 	if (ImGui::Begin("Fullscreen", &wndOpen, flags))
 	{
 		ImGui::BeginChild("property", ImVec2(leftPanelWidth, 0), true);
-		if (ImGui::Button("load scene"))
+		if (ImGui::Button("load scene(xml)"))
 		{
 			nfdchar_t* path = nullptr;
 			if (NFD_OpenDialog(nullptr, SCENE_PATH, &path) == NFD_OKAY) {
@@ -256,6 +256,7 @@ int main()
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
 	io.Fonts->AddFontDefault();
+	io.IniFilename = nullptr;
 	ImGui::StyleColorsDark();
 	ImGui_ImplGlfw_InitForOpenGL(glfwWindow, true);
 	ImGui_ImplOpenGL3_Init(nullptr);

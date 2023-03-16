@@ -1,15 +1,16 @@
 ﻿find_package(CUDA 11 REQUIRED)
 message("find cuda include dir: " ${CUDA_INCLUDE_DIRS})
 
-set(OPTIX7_DIR "C:/ProgramData/NVIDIA Corporation/OptiX SDK 7.6.0")
-if(EXISTS ${OPTIX7_DIR}/include/optix.h)
-    message("find optix7 dir: ${OPTIX7_DIR}")
-else()
-    message(FATAL_ERROR "optix7 dir not find: ${OPTIX7_DIR}")
-endif()
+find_path(
+    OPTIX_INCLUDE_DIRS
+    "optix.h"
+    PATHS "C:/ProgramData/NVIDIA Corporation/OptiX SDK 7.6.0/include"
+    REQUIRED
+)
+message("find optix dir: ${OPTIX_INCLUDE_DIRS}")
 
 #编译cu到ptx，然后bin2c把ptx写入c文件
-find_program(BIN2C bin2c)
+find_program(BIN2C bin2c REQUIRED)
 message("find bin2c: ${BIN2C}")
 macro(cuda_compile_and_embed output_var cuda_file)
   set(c_var_name ${output_var})
@@ -28,7 +29,7 @@ endmacro()
 include_directories(
 	"../deps"
     ${CUDA_INCLUDE_DIRS}
-    ${OPTIX7_DIR}/include
+    ${OPTIX_INCLUDE_DIRS}
 )
 
 set(HEADER_FILES

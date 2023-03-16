@@ -140,7 +140,7 @@ extern "C" __device__ float3 light_evaluate_rect(
 	{
 		*pdf = light.invArea; //surface pdf
 		//solid angel pdf
-		*pdf *= sqr(*light_distance) / abs(cos_theta);
+		*pdf *= sqr(*light_distance) / fabsf(cos_theta);
 		return light.radiance;
 	}
 
@@ -167,7 +167,7 @@ extern "C" __device__ float3 light_sample_rect(
 	}
 
 	*pdf = light.invArea;
-	*pdf *= dist_sq / abs(cos_theta);
+	*pdf *= dist_sq / fabsf(cos_theta);
 	return light.radiance;
 }
 
@@ -190,7 +190,7 @@ extern "C" __device__ float3 light_evaluate_disk(
 	if (*light_distance < distance)
 	{
 		*pdf = light.invArea;
-		*pdf *= sqr(*light_distance) / abs(cos_theta);
+		*pdf *= sqr(*light_distance) / fabsf(cos_theta);
 		return light.radiance;
 	}
 
@@ -218,7 +218,7 @@ extern "C" __device__ float3 light_sample_disk(
 	}
 
 	*pdf = light.invArea;
-	*pdf *= dist_sq / abs(cos_theta);
+	*pdf *= dist_sq / fabsf(cos_theta);
 	return light.radiance;
 }
 
@@ -231,7 +231,7 @@ extern "C" __device__ float3 light_evaluate_spot(
 	if (*pdf != 0.0f)
 	{
 		float3 normal = normalize(light.localToWorldMatrix.basisz());
-		float cos_angle = abs(dot(normal, ray_dir));
+		float cos_angle = fabsf(dot(normal, ray_dir));
 		float attenuation = clamp((cos_angle - light.cosAngle) * light.cosAngleScale, 0.0f, 1.0f);
 		return radiance * attenuation;
 	}
@@ -246,7 +246,7 @@ extern "C" __device__ float3 light_sample_spot(
 	if (*pdf != 0.0f)
 	{
 		float3 normal = normalize(light.localToWorldMatrix.basisz());
-		float cos_angle = abs(dot(normal, *wi));
+		float cos_angle = fabsf(dot(normal, *wi));
 		float attenuation = clamp((cos_angle - light.cosAngle) * light.cosAngleScale, 0.0f, 1.0f);
 		return radiance * attenuation;
 	}
