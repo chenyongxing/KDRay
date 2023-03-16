@@ -15,6 +15,12 @@
 * 迪士尼原型材质 disney principled material
 ![](./screenshot/disney_hyperion.png)
 
+* 薄镜模型景深 depth of field
+
+* 【材质】金属、玻璃、塑料、迪士尼 [material] metal glass plastic disney
+
+* 【灯光】定向光、环境、矩形、球、圆盘、聚光灯 [light] directional dome rect point disk spot
+
 ## 截图 screenshot
 
 ![](./screenshot/dining_room.png)
